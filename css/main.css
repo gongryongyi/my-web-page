@@ -1,0 +1,315 @@
+
+@charset "UTF-8"; 
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+/* 버튼 누를 시 스크롤 매끄럽게 내려가는 효과 */
+
+/* section2,3 나누기 */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+.main_text {
+  text-align: center;
+}
+
+/* main 아이콘 설정 */
+.icon {
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.all_icon {
+  margin-top: 20px;
+  text-align: center;
+}
+
+  
+/* bg-video */
+.bg-video__content {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+
+/* -------------- 메인*/
+
+
+  /* ------------------------ 여기서부터 nav 바 */
+
+  /* 네비바 밑줄 없애기 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* miri.me 로고 위치 */
+#logo {
+  margin-top: 10px;
+    margin-left: -300px;
+    margin-right: 500px;
+    width: 40px;
+}
+
+/* 네비 바 스크롤 시 위치 고정*/
+.local-nav {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.0);
+    z-index: 1;
+}
+
+/* 네비 바 수평 정렬*/
+.local-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* 네비 바 폰트 설정(폰트 종류, 색깔, 위치)*/
+.local-nav-items {
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgb(0, 0, 0);
+    margin-right: -300px;
+    margin-left: -70px;
+}
+
+/* nav 바 - 버튼 효과 */
+.underline-btn {
+  display: inline-block;
+  padding: 1em 0;
+  border-radius: 0;
+  color: #000000;
+  margin-top: 0rem;
+/* 네비바 폰트 사이즈 */
+  font-size: 0.01rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+
+
+/* 밑줄 생기는 효과 */
+.underline-btn:before, .underline-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1px;
+  width: 0;
+}
+.underline-btn:before {
+  transition: width 0s ease;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+}
+.underline-btn:after {
+  right: 2.2%;
+  bottom: 0px;
+  background: #000000;
+  transition: width 0.4s ease;
+}
+.underline-btn:hover:before {
+  width: 97.8%;
+  background: #000000;
+  transition: width 0.4s ease;
+}
+.underline-btn:hover:after {
+  width: 97.8%;
+  background: 0 0;
+  transition: all 0s ease;
+}
+
+
+/* 아랫줄 있어야 section2 영역 보존 */
+* {
+  box-sizing: border-box;
+}
+
+
+/* developer 맨 위 고정 */
+header.header {
+  position: absolute;
+  /* 위치 */
+  top: 48%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+/* developer 글씨 가운데 정렬 크기 */
+header.header h1 {
+  font-size: 4rem;
+  color: #222222;
+  text-align: center;
+  /* margin-top: 0; */
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* developer css 글리치 효과 */
+.glitch-window {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 100%;
+  color: #222222;
+  text-shadow: 2px 0 #F9F8F8, -1px 0 #0E0E52, -2px 0 #8be6ae;
+  overflow: hidden;
+  animation: crt-me 4000ms infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes crt-me {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  10% {
+    clip: rect(112px, 9999px, 76px, 0);
+  }
+  20% {
+    clip: rect(85px, 9999px, 77px, 0);
+  }
+  30% {
+    clip: rect(27px, 9999px, 97px, 0);
+  }
+  40% {
+    clip: rect(64px, 9999px, 98px, 0);
+  }
+  50% {
+    clip: rect(61px, 9999px, 85px, 0);
+  }
+  60% {
+    clip: rect(99px, 9999px, 114px, 0);
+  }
+  70% {
+    clip: rect(34px, 9999px, 115px, 0);
+  }
+  80% {
+    clip: rect(98px, 9999px, 129px, 0);
+  }
+  90% {
+    clip: rect(43px, 9999px, 96px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 64px, 0);
+  }
+}
+
+@keyframes crt-me {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  10% {
+    clip: rect(112px, 9999px, 76px, 0);
+  }
+  20% {
+    clip: rect(85px, 9999px, 77px, 0);
+  }
+  30% {
+    clip: rect(27px, 9999px, 97px, 0);
+  }
+  40% {
+    clip: rect(64px, 9999px, 98px, 0);
+  }
+  50% {
+    clip: rect(61px, 9999px, 85px, 0);
+  }
+  60% {
+    clip: rect(99px, 9999px, 114px, 0);
+  }
+  70% {
+    clip: rect(34px, 9999px, 115px, 0);
+  }
+  80% {
+    clip: rect(98px, 9999px, 129px, 0);
+  }
+  90% {
+    clip: rect(43px, 9999px, 96px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 64px, 0);
+  }
+}
+
+
+
+/* 본문 */
+
+#section2 {
+  background-color: white;
+}
+
+.section-content h1 {
+  font-size: 20px;
+}
+
+/* 여기서부터 원하는 스타일링 작성 */
+
+.about_me_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.profile, .contact {
+  margin-bottom: 5%;
+  width: 55%; /* 두 요소를 반씩 차지하도록 조정 */
+  order: 2;
+}
+
+.about_me {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.skils {
+  width: 100%;
+  order: 3;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.all {
+  font-size: 13px;
+}
+
+.about_me_p {
+  font-size: 18px;
+}
+
+#section3 {
+  background-color: #0E0E52;
+}
+
+
+
+
+
