@@ -256,8 +256,12 @@ header.header h1 {
 
 /* 본문 */
 
-#section2 {
-  background-color: white;
+#section1 {
+  background: linear-gradient(to bottom, #ffffff, #ffffff 78%,#04021d); /* 원하는 색상으로 변경 */
+  color: black; /* 텍스트의 색상 설정 */
+  padding: 10px;
+  text-align: center;
+
 }
 
 .section-content h1 {
@@ -279,13 +283,19 @@ header.header h1 {
 }
 
 .profile, .contact {
+  margin-left: -10%;
   margin-bottom: 5%;
-  width: 55%; /* 두 요소를 반씩 차지하도록 조정 */
+  width: 30%; /* 두 요소를 반씩 차지하도록 조정 */
   order: 2;
 }
 
+.contact {
+  margin-left: -4.459rem;
+}
+
 .about_me {
-  width: 100%;
+  width: 70%;
+  margin-top: -20%;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -294,19 +304,28 @@ header.header h1 {
   width: 100%;
   order: 3;
   margin-top: 5px;
+  margin-right: 300px;
   text-align: left;
 }
 
 .all {
   font-size: 13px;
+  text-align: left;
+  margin-left: 69px;
 }
 
 .about_me_p {
-  font-size: 18px;
+  font-size: 25px;
 }
 
-#section3 {
-  background-color: #0E0E52;
+
+}
+#section2 {
+  background: linear-gradient(to bottom,  #04021d, #000000); /* 원하는 색상으로 변경 */
+  color: white; /* 텍스트의 색상 설정 */
+  padding: 20px;
+  text-align: center;
+
 }
 
 
